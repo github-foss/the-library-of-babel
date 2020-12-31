@@ -1,4 +1,5 @@
-# Library Of Pybel
+![](https://i.imgur.com/jfTuO0G.jpg)
+
 ## About
 This is an open source python implementation of the [Library of Babel](https://libraryofbabel.info).
 ## Functionality
@@ -28,7 +29,7 @@ Run the file from the command line with an action argument. The following argume
 ## Explanation
 What was needed for this project was a way to generate seemingly random pages in a near-infinite address space which could also be searched for specific strings.
 
-I realized not early on that what I needed was not a reversible RNG, but in fact an encoding scheme to cleverly encode the page's text in the address of the book. Paired with a seeded RNG for shorter pages, I could reliably generate random pages, but also encode specific text into the page to be generated.
+What we needed was not a reversible RNG, but in fact an encoding scheme to cleverly encode the page's text in the address of the book. Paired with a seeded RNG for shorter pages, we could reliably generate random pages, but also encode specific text into the page to be generated.
 
 To understand the encoding, you must think of the hex address of the book as a base-36 number and the text of the book as a base-29 number (26 letters plus space, comma, and period). The wall, shelf, volume, and page can be thought of as a base-10 number independent of the hex address. This base-10 number will be referred to as the location.
 
